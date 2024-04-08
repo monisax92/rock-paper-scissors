@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=exercism.org">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Rock paper scissors</title>
+</head>
+
+<body>
+    <!-- <div id="confetti-canvas"></div> -->
+    <div class="game-container">
+        <header class="header">
+            <h1>Rock Paper Scissors Lizard Spock</h1>
+        </header>
+
+        <div class="player-container" id="player">
+            <h2>You - <span id="player-score">0</span><span class="choice" id="player-choice"> --- Choice</span></h2>
+            <i class="far fa-hand-rock" title="Rock" id="playerRock" onclick="select('rock')"></i>
+            <i class="far fa-hand-paper" title="Paper" id="playerPaper" onclick="select('paper')"></i>
+            <i class="far fa-hand-scissors" title="Scissors" id="playerScissors" onclick="select('scissors')"></i>
+            <i class="far fa-hand-lizard" title="Lizard" id="playerLizard" onclick="select('lizard')"></i>
+            <i class="far fa-hand-spock" title="Spock" id="playerSpock" onclick="select('spock')"></i>
+        </div>
+
+        <div class="player-container" id="computer">
+            <h2>Computer - <span id="computer-score">0</span><span class="choice" id="computer-choice"> ---
+                    Choice</span>
+            </h2>
+            <i class="far fa-hand-rock" title="Rock" id="computerRock"></i>
+            <i class="far fa-hand-paper" title="Paper" id="computerPaper"></i>
+            <i class="far fa-hand-scissors" title="Scissors" id="computerScissors"></i>
+            <i class="far fa-hand-lizard" title="Lizard" id="computerLizard"></i>
+            <i class="far fa-hand-spock" title="Spock" id="computerSpock"></i>
+        </div>
+
+        <!-- reset -->
+        <i class="fas fa-sync-alt reset-icon" title="Reset" onclick="resetAll()"></i>
+
+        <!-- result -->
+        <div class="result-container">
+            <h3 class="result-text" id="resultText"></h3>
+        </div>
+    </div>
+
+    <!-- instructions -->
+    <button id="info-btn" class="info-btn">Show instructions</button>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/pIpmITBocfM?si=Jh81Fm5ts_bVTnXn"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" network.http.referer.XOriginPolicy="0"
+        allowfullscreen></iframe>
+
+    <script src="./confetti.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
